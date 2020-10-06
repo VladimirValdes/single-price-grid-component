@@ -1,0 +1,20 @@
+@mixin  base-card ($bk-color, $box-shadow, $mg-lf) {
+    background-color: $bk-color;
+    padding: 1.5rem $mg-lf 1.5rem 1.5rem;
+    box-shadow: $box-shadow;
+
+}
+
+@mixin  base-button($wth, $hgt, $mg, $border-r, $fw, $bk-c, $cl, $box-sh) {
+    
+    width: $wth;
+	height: $hgt;
+	margin-top: $mg;
+	border-radius: $border-r;
+	border: none;
+	font-weight: $fw;
+	background-color: $bk-c;
+	color: $cl;
+    box-shadow: $box-sh;
+    font-size: 18px;
+}

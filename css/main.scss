@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;1,700&display=swap');
+@import 'palette.scss';
+@import 'mixins.scss';
+@import 'responsive.scss';
+
+body {
+	font-size: $content;
+	font-family: $font;
+	background-color: $neutral-gray;
+}
+
+
+
+main .cards {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 380px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 300px 260px 260px;
+	padding: 1rem;
+
+
+	.first__card {
+		margin-top: $mg-bg;
+		border-top-left-radius: $border-radius;
+		border-top-right-radius: $border-radius;
+		@include base-card(#fff, rgba(0, 0, 0, 0.24) 0px 3px 8px, 1rem);
+		grid-row: 1/2;
+
+	}
+
+	.second__card {
+
+		@include base-card( $primary-cyan, rgba(0, 0, 0, 0.24) 0px 3px 8px, 1rem );
+		grid-row: 2/3;
+
+
+	}
+
+	.last__card{
+
+		@include base-card(#4abebd,  rgba(0, 0, 0, 0.24) 0px 3px 8px, 0);
+		border-bottom-right-radius: $border-radius;
+		border-bottom-left-radius: $border-radius;
+		grid-row: 3/4;
+
+
+	}
+}
+
+
+.first__card {
+
+	h2 {
+		color: $primary-cyan;
+	}
+		
+	h4 {
+		color: $primary-bright;
+		font-size: 18px;
+	}
+		
+	p {
+		color: $neutral-blue;
+		line-height: 1.6rem;
+	}
+
+}
+
+.second__card {
+
+	h3 {
+		font-size: $subtitle;
+		color: $neutral-gray;
+		font-weight: $weight-bg;
+		margin-bottom: $mg-md;
+	}
+		
+	.box__price {
+		display: flex;
+		
+		h1 {
+			font-size: $title;
+			color: $neutral-gray;
+			font-weight: $weight-bg;
+		}
+		
+		p {
+			color: #adf1fa;
+			align-self: center;
+			margin: 0 0 0 $mg-md;
+		}
+	}
+		
+	p {
+		color: $neutral-gray;
+		font-weight: $weight-md;
+		font-size: 18px;
+	}
+		
+	.btn {
+		@include base-button(
+			100%,
+			50px,
+			$mg-md,
+			$border-radius,
+			$weight-bg,
+			$primary-bright,
+			$neutral-gray,
+			rgba(0, 0, 0, 0.25) 0px 25px 50px -12px
+		);
+	}
+
+}
+
+.last__card {
+	h3 {
+		color: $neutral-gray;
+		font-weight: $weight-bg;
+		margin-bottom: $mg-md;
+	}
+		
+	p {
+		width: 65%;
+		margin: 0;
+		color: #adf1fa;
+		line-height: 1.5rem;
+	}
+}
+
+@include tablet(720px)
