@@ -99,6 +99,12 @@ main .cards .last__card {
   line-height: 1.5rem;
 }
 
+.footer {
+  width: 85%;
+  margin: 0.5rem auto;
+  text-align: center;
+}
+
 @media screen and (min-width: 720px) {
   main .cards {
     max-width: 720px;
